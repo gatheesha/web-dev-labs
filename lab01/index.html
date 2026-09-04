@@ -1,65 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO Meta Tags -->
-    <title>Your Page Title Here</title>
-    <meta name="description" content="Your page description here - keep it under 160 characters">
-    <meta name="keywords" content="your, relevant, keywords, here">
-    <meta name="author" content="Your Name">
-
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Your Page Title Here">
-    <meta property="og:description" content="Your page description here">
-    <meta property="og:image" content="https://yoursite.com/image.jpg">
-    <meta property="og:url" content="https://yoursite.com">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Your Page Title Here">
-    <meta name="twitter:description" content="Your page description here">
-    <meta name="twitter:image" content="https://yoursite.com/image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Fonts (Example: Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Extras</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="container">
+    <h1>Bhasa Buddy Archieve</h1>
 
-    <!-- Header -->
-    <header role="banner">
-        <nav role="navigation" aria-label="Main navigation">
-            <!-- Your navigation here -->
-        </nav>
-    </header>
+    <!-- Timeline view -->
+    <section id="timeline-view">
+      <div id="timeline-track"></div>
+    </section>
 
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-        <!-- Your main content goes here -->
-        <h1>Welcome to Your Website</h1>
-        <p>Start building something amazing!</p>
-    </main>
+    <!-- Gallery view -->
+    <section id="gallery-view" class="hidden">
+      <img id="gallery-image" src="" alt="">
+      <p id="gallery-desc"></p>
+      <div class="gallery-controls">
+        <button id="btn-prev">VIEW PREV</button>
+        <button id="btn-next">VIEW NEXT</button>
+        <button id="btn-back">BACK</button>
+      </div>
+    </section>
+</div>
 
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <!-- Your footer content here -->
-    </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
