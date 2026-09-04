@@ -1,31 +1,39 @@
 // hardcoded data for v1, will be replaced by Cloudinary later
 const timelineData = [
   {
-    date: "2026-01-10",
+    date: "12 Jan 2026",
+    title: "Freshers Icebreaker",
+    caption: "First meetup of the semester, welcoming new members.",
     images: [
-      { src: "https://picsum.photos/seed/10a/800/500", desc: "First entry for this day. Describe what happened here." },
-      { src: "https://picsum.photos/seed/10b/800/500", desc: "Second image for the same day, different moment." }
+      { src: "https://picsum.photos/seed/bb1a/800/500", desc: "New members introducing themselves in English for the first time at Basha Buddy." },
+      { src: "https://picsum.photos/seed/bb1b/800/500", desc: "Icebreaker games to help freshers get comfortable speaking in front of a group." }
     ]
   },
   {
-    date: "2026-01-11",
+    date: "19 Jan 2026",
+    title: "Impromptu Speaking Session",
+    caption: "Members speak on random topics with no preparation.",
     images: [
-      { src: "https://picsum.photos/seed/11a/800/500", desc: "A new day, a new set of images and descriptions." }
+      { src: "https://picsum.photos/seed/bb2a/800/500", desc: "Members picking random topics and speaking for two minutes with no preparation." }
     ]
   },
   {
-    date: "2026-01-12",
+    date: "26 Jan 2026",
+    title: "Debate Night",
+    caption: "Two teams debate a motion in front of the club.",
     images: [
-      { src: "https://picsum.photos/seed/12a/800/500", desc: "Third day entry, first image." },
-      { src: "https://picsum.photos/seed/12b/800/500", desc: "Third day entry, second image." },
-      { src: "https://picsum.photos/seed/12c/800/500", desc: "Third day entry, third image." }
+      { src: "https://picsum.photos/seed/bb3a/800/500", desc: "Two teams debating a motion in front of the full club." },
+      { src: "https://picsum.photos/seed/bb3b/800/500", desc: "Audience voting on the winning team after closing arguments." },
+      { src: "https://picsum.photos/seed/bb3c/800/500", desc: "Certificates handed out to the best speakers of the night." }
     ]
   }
 ];
 
+const landingView = document.getElementById("landing-view");
 const timelineView = document.getElementById("timeline-view");
 const galleryView = document.getElementById("gallery-view");
 const timelineTrack = document.getElementById("timeline-track");
+const galleryTitle = document.getElementById("gallery-title");
 const galleryImage = document.getElementById("gallery-image");
 const galleryDesc = document.getElementById("gallery-desc");
 
@@ -33,12 +41,17 @@ let currentDay = 0;
 let currentImage = 0;
 let typeTimer = null;
 
+function showView(view) {
+  [landingView, timelineView, galleryView].forEach(v => v.classList.add("hidden"));
+  view.classList.remove("hidden");
+}
+
 function renderTimeline() {
   timelineTrack.innerHTML = "";
   timelineData.forEach((day, i) => {
     const btn = document.createElement("button");
     btn.className = "day-btn";
-    btn.textContent = day.date;
+    btn.innerHTML = `<span class="day-date">${day.date} — ${day.title}</span><span class="day-caption">${day.caption}</span>`;
     btn.addEventListener("click", () => openDay(i));
     timelineTrack.appendChild(btn);
   });
@@ -47,13 +60,14 @@ function renderTimeline() {
 function openDay(dayIndex) {
   currentDay = dayIndex;
   currentImage = 0;
-  timelineView.classList.add("hidden");
-  galleryView.classList.remove("hidden");
+  showView(galleryView);
   renderGallery();
 }
 
 function renderGallery() {
-  const img = timelineData[currentDay].images[currentImage];
+  const day = timelineData[currentDay];
+  const img = day.images[currentImage];
+  galleryTitle.textContent = `${day.title} — ${day.date}`;
   galleryImage.src = img.src;
   typeText(img.desc);
 }
@@ -70,6 +84,8 @@ function typeText(text) {
   }, 20);
 }
 
+document.getElementById("btn-enter").addEventListener("click", () => showView(timelineView));
+
 document.getElementById("btn-prev").addEventListener("click", () => {
   const total = timelineData[currentDay].images.length;
   currentImage = (currentImage - 1 + total) % total;
@@ -82,9 +98,6 @@ document.getElementById("btn-next").addEventListener("click", () => {
   renderGallery();
 });
 
-document.getElementById("btn-back").addEventListener("click", () => {
-  galleryView.classList.add("hidden");
-  timelineView.classList.remove("hidden");
-});
+document.getElementById("btn-back").addEventListener("click", () => showView(timelineView));
 
 renderTimeline();
