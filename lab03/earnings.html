@@ -5,21 +5,34 @@
     </head>
 
     <body>
-
-
         <nav>
-            <ul id="nav-links">
-                <li><a href="dashboard.html">DashBoard</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="clients.html">Clients</a></li>
-                <li><a href="earnings.html">Earnings</a></li>
-                <li><a href="invoices.html">Invoices</a></li>
-                <li><a href="reports.html">Reports</a></li>
-                <li>Total Balance</li>
-            </ul>
+            <table padding="10" cellspacing="5" width="100%">
+                <tr>
+                    <td><a href="dashboard.html">DashBoard</a></td>
+                    <td><a href="projects.html">Projects</a></td>
+                    <td><a href="clients.html">Clients</a></td>
+                    <td><a href="earnings.html">Earnings</a></td>
+                    <td><a href="invoices.html">Invoices</a></td>
+                    <td>Total Balance</td>
+                </tr>
+            </table>
         </nav>
 
+        <table width="100%">
+            <tr>
+                <td width="80%" align="left">
+                    <h1>Earnings</h1>
+                </td>
+                <td align="right"><a href="add_earning.html"><img src="assets/ui/add.png" alt="add button" width="25px" ></a></td>
+            </tr>
 
+<table>
+<tr>
+    <td>Overview</a><iframe id="overview" src="earnings_overview.html" width="100%" height="300px"></iframe></td>
+    <td>Income</a> <iframe id="income" src="earnings_income.html" width="100%" height="300px"></iframe></td>
+    <td>Expenses</a><iframe id="expenses" src="earnings_expenses.html" width="100%" height="300px"></iframe></td>
+</tr>
+</table>
 
     <footer>
         <p>Wada 2.0. All rights reserved.</p>
