@@ -1,0 +1,16 @@
+$kind: http-request
+name: Create Post
+order: 3000
+url: 'https://jsonplaceholder.typicode.com/posts'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "WAD Laboratory 02",
+      "body": "Creating a sample post using Postman",
+      "userId": 1
+    }

@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Posts
+order: 1000
+url: 'https://jsonplaceholder.typicode.com/posts'
+method: GET

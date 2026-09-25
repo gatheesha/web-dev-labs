@@ -1,0 +1,16 @@
+$kind: http-request
+name: Update Post — optional
+order: 6000
+url: 'https://jsonplaceholder.typicode.com/posts/1'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "Partially updated WAD post",
+      "body": "Only selected fields are modified",
+      "userId": 1
+    }

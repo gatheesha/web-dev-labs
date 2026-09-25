@@ -1,0 +1,16 @@
+$kind: http-request
+name: Replace Post
+order: 4000
+url: 'https://jsonplaceholder.typicode.com/posts/1'
+method: PUT
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "Replaced WAD post",
+      "body": "This resource has been fully replaced",
+      "userId": 1
+    }

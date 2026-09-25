@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get One Post from 101
+order: 2000
+url: 'https://jsonplaceholder.typicode.com/posts/101'
+method: GET
