@@ -1,0 +1,10 @@
+.app { max-width: 640px; margin: 40px auto; padding: 28px; border-radius: 12px; background: #ffffff; }
+h1 { margin: 0 0 12px; }
+p { line-height: 1.5; }
+.student { color: #52647a; font-size: 14px; }
+.task-entry { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 18px; }
+input { flex: 1; min-width: 160px; border: 1px solid #9baec7; border-radius: 6px; padding: 10px 12px; }
+button { cursor: pointer; border: 0; border-radius: 6px; padding: 10px 16px; background: #245f9e; color: #fff; }
+button:hover { background: #174a80; }
+ul { padding-left: 24px; }
+li { padding: 8px 0; line-height: 1.5; overflow-wrap: anywhere; }

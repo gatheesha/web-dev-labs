@@ -1,0 +1,48 @@
+/* ID selector */
+#first {
+  color: blue;
+}
+
+/* Class selector */
+.boxed {
+  border: 1px solid red;
+}
+
+/* Element selector */
+p:nth-of-type(3) {
+  font-style: italic;
+}
+
+/* Descendant selector:*/
+p:nth-of-type(3) span {
+  font-weight: bold;
+}
+
+/* Child selector */
+.boxed > span {
+  background-color: yellow;
+}
+
+/* Sibling selector */
+#first + p {
+  margin-top: 10px;
+}
+/* Alternative reading */
+.boxed:has(+ p) {
+  margin-top: 10px;
+}
+
+/* Attribute selector */
+p[title] {
+  font-size: 20px;
+}
+
+/* First letter of each paragraph */
+p::first-letter {
+  color: red;
+}
+
+/* Pseudo-element: triangle at the end of the first paragraph */
+#first::after {
+  content: " \25B6";
+}

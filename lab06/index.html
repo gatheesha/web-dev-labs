@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <!-- Used Bulma for css. https://bulma.io/ with forced light theme-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FOT Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  </head>
+  <body>
+    <div class="container is-max-tablet">
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Faculty of Technology
+      </h1>
+      <p class="subtitle">
+        University of Sri Jayewardenepura
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-5">Campus Event Pass Builder</h2>
+      <form id="passForm" novalidate>
+        <div class="field">
+          <label class="label">Name</label>
+          <input class="input" id="name" type="text">
+          <p class="help is-danger" id="nameError"></p>
+        </div>
+        <div class="field">
+          <label class="label">Index Number (e.g. ICT12345)</label>
+          <input class="input" id="index" type="text">
+          <p class="help is-danger" id="indexError"></p>
+        </div>
+        <div class="field">
+          <label class="label">University Email</label>
+          <input class="input" id="email" type="text">
+          <p class="help is-danger" id="emailError"></p>
+        </div>
+        <div class="field">
+          <label class="label">Programme</label>
+          <div class="select">
+            <select id="programme">
+              <option value="">Select</option>
+              <option>ICT</option>
+              <option>ET</option>
+              <option>BST</option>
+            </select>
+          </div>
+          <p class="help is-danger" id="programmeError"></p>
+        </div>
+        <div class="field">
+          <label class="label">Academic Year</label>
+          <div class="select">
+            <select id="year">
+              <option value="">Select</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <p class="help is-danger" id="yearError"></p>
+        </div>
+        <div class="field">
+          <label class="label">Request Type</label>
+          <div class="select">
+            <select id="requestType">
+              <option>New Pass</option>
+              <option>Replacement Pass</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Purpose / Notes</label>
+          <textarea class="textarea" id="notes"></textarea>
+          <p class="help is-danger" id="notesError"></p>
+        </div>
+
+        <h3 class="title is-6">Events</h3>
+        <div id="items"></div>
+        <p class="help is-danger" id="itemsError"></p>
+        <p>
+          Selected: <b id="count">0</b> |
+          Duration: <b id="duration">0</b> h |
+          Fee: Rs. <b id="fee">0</b>
+        </p>
+        <br>
+        <button class="button is-primary" type="submit">Submit</button>
+        <button class="button" type="button" id="resetBtn">Reset</button>
+      </form>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" id="output"></div>
+  </section>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>

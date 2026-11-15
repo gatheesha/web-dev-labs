@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.box {
+  margin: 20px 0;
+  border: 3px solid darkblue;
+  padding: 20px;
+  width: 300px;
+  height: 420px;
+  background-color: aliceblue;
+}
+
+.limited {
+  margin: 20px 0;
+  border: 2px dashed green;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  max-height: 450px;
+  min-height: 80px;
+}
+
+.scroll {
+  margin: 20px 0;
+  border: 2px solid crimson;
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+}

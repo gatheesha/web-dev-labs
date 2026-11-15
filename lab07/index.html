@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photography Website - Lab07</title>
+    <style>
+        * {
+            outline: 1px solid black;
+            margin : 0;
+        }
+
+        .grid {
+            /*  flex: 100%; max-width: 100%;  */
+            display: grid;
+             grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width:850px) {
+            .grid {
+                grid-template-columns: auto;
+            }
+        }
+
+        .cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 4px;
+        }
+
+        .cell img {
+            vertical-align: middle;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .cell p {
+            z-index: 100;
+            color: gray;
+            text-align: justify;
+        }
+
+
+        body {
+            margin: 40px auto;
+            max-width: 850px;
+            line-height: 1.6;
+            font-size: 18px;
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="section">
+
+        <div class="container">
+            <h1> Welcome </h1>
+            <p> Here goes my <strong>responsive</strong> and <strong>awesome</strong> photography website. </p>
+            <div class="grid">
+                <div class="cell">
+                    <img src="img/img1.jpg">
+                    <p>This is a figure caption for figure 1</p>
+                </div>
+                <div class="cell"><img src="img/img2.jpg"></div>
+                <div class="cell"><img src="img/img3.jpg"></div>
+                <div class="cell">
+                    <h4>Can a cell contain some paragraph casually? I guess it can right?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <div class="cell"><img src="img/img4.jpg"></div>
+                <div class="cell">
+                    <img src="img/img5.jpg">
+                    <p>Turns out captions are optional too.</p>
+                </div>
+                <div class="cell"><img src="img/img6.jpg"></div>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

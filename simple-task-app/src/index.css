@@ -1,0 +1,4 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px; background: #eef2f6; color: #1d2d44; font-family: Arial, sans-serif; }
+button, input { font: inherit; }
+button:focus-visible, input:focus-visible { outline: 3px solid #82b4ef; outline-offset: 3px; }
